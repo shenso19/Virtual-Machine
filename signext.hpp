@@ -1,3 +1,9 @@
+#ifndef SIGNEXT_HPP
+#define SIGNEXT_HPP
+
+#include <cstdint>
+
+
 
 inline uint32_t sign_extend(uint32_t value, unsigned sign_bit_index) {  // sign extend function that takes a value and the location of the sign bit within the field.
   
@@ -8,3 +14,6 @@ inline uint32_t sign_extend(uint32_t value, unsigned sign_bit_index) {  // sign 
     const uint32_t high_mask = ~field_mask;                    // inverts the field mask to create a mask that has zeros in the field width and ones elsewhere. This will be used to apply the sign extension to the higher bits of the value.
     return (value & field_mask) | (full_sign & high_mask);      // combines the original value (masked to keep only the bits within the field) with the sign extension (applied to the higher bits) using a bitwise OR operation. This results in the final sign-extended value.
 }
+
+#endif // SIGNEXT_HPP
+``
