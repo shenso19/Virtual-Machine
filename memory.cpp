@@ -5,11 +5,11 @@
 
 
 
-    Memory() : mem(MEMORY_SIZE) {
+    Memory::Memory() : mem(MEMORY_SIZE) {
         reset();  
     }
 
-    uint32_t read_word(uint32_t address) const {
+    uint32_t Memory::read_word(uint32_t address) const {
         uint32_t b0 = mem[address];
         uint32_t b1 = mem[address + 1];
         uint32_t b2 = mem[address + 2];
