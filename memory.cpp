@@ -1,11 +1,10 @@
 #include "memory.hpp"
 #include <cassert>
-#include <vector>
-#include <cstdint>
 
 
 
-    Memory::Memory() : mem(MEMORY_SIZE) {
+    Memory::Memory() 
+        : mem(MEMORY_SIZE) {
         reset();  
     }
 
