@@ -1,6 +1,6 @@
 #include <cstdint>
-#include "register.cpp"
-#include "memory.cpp"
+#include "register.hpp"
+#include "memory.hpp"
 
 class Machine {
 private:
